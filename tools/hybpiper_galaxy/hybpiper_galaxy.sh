@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 # The runHybpiperAssemble function calls the python script, which,
 # generates the nessesary hybpiper commands based on the inputs and writes
 # them to a .txt file.
