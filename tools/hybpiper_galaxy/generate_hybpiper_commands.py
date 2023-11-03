@@ -55,7 +55,9 @@ def extract_read_files(read_zip_file: str,
         # move the fastq files at the root of the output_dir
         for root, dirs, files in os.walk(output_dir):
             for f in files:
-                shutil.move(os.path.join(root, f), output_dir)
+                if os.path.join(root, f) != os.path.join(output_dir, f):
+                    shutil.move(os.path.join(root, f), output_dir)
+
     return filenames
 
 
