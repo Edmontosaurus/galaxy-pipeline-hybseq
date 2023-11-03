@@ -23,7 +23,7 @@ runHybpiperAssemble() {
     mkdir -p "${strDirectory}/outputfile/"
     mkdir -p "${workingDir}/raw_reads"
 
-    cd ${workingDir}
+    #cd ${workingDir}
 
     #outputDirectory=$(dirname "${readfiles}")
 
@@ -69,7 +69,7 @@ runHybpiperAssemble() {
     # Delete remaining temporary files
     rm -rf ${strDirectory}
 
-    ) > /home/galaxy/hybpiper_output_log.txt 2>&1 #> /dev/null 2>&1 #This will make sure nothing is written to stderr
+    ) #> /home/galaxy/hybpiper_output_log.txt 2>&1 #> /dev/null 2>&1 #This will make sure nothing is written to stderr
 }
 
 # The main function.
